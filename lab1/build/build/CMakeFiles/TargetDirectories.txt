@@ -1,0 +1,4 @@
+/home/nikita/operation_systems/lab1/build/build/CMakeFiles/main_exec.dir
+/home/nikita/operation_systems/lab1/build/build/CMakeFiles/child_exec.dir
+/home/nikita/operation_systems/lab1/build/build/CMakeFiles/edit_cache.dir
+/home/nikita/operation_systems/lab1/build/build/CMakeFiles/rebuild_cache.dir

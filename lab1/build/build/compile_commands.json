@@ -1,0 +1,38 @@
+[
+{
+  "directory": "/home/nikita/operation_systems/lab1/build/build",
+  "command": "/usr/bin/g++   -g -std=gnu++11 -o CMakeFiles/main_exec.dir/src/main.cpp.o -c /home/nikita/operation_systems/lab1/src/main.cpp",
+  "file": "/home/nikita/operation_systems/lab1/src/main.cpp",
+  "output": "CMakeFiles/main_exec.dir/src/main.cpp.o"
+},
+{
+  "directory": "/home/nikita/operation_systems/lab1/build/build",
+  "command": "/usr/bin/g++   -g -std=gnu++11 -o CMakeFiles/main_exec.dir/src/io.cpp.o -c /home/nikita/operation_systems/lab1/src/io.cpp",
+  "file": "/home/nikita/operation_systems/lab1/src/io.cpp",
+  "output": "CMakeFiles/main_exec.dir/src/io.cpp.o"
+},
+{
+  "directory": "/home/nikita/operation_systems/lab1/build/build",
+  "command": "/usr/bin/g++   -g -std=gnu++11 -o CMakeFiles/main_exec.dir/src/errors.cpp.o -c /home/nikita/operation_systems/lab1/src/errors.cpp",
+  "file": "/home/nikita/operation_systems/lab1/src/errors.cpp",
+  "output": "CMakeFiles/main_exec.dir/src/errors.cpp.o"
+},
+{
+  "directory": "/home/nikita/operation_systems/lab1/build/build",
+  "command": "/usr/bin/g++   -g -std=gnu++11 -o CMakeFiles/child_exec.dir/src/child.cpp.o -c /home/nikita/operation_systems/lab1/src/child.cpp",
+  "file": "/home/nikita/operation_systems/lab1/src/child.cpp",
+  "output": "CMakeFiles/child_exec.dir/src/child.cpp.o"
+},
+{
+  "directory": "/home/nikita/operation_systems/lab1/build/build",
+  "command": "/usr/bin/g++   -g -std=gnu++11 -o CMakeFiles/child_exec.dir/src/io.cpp.o -c /home/nikita/operation_systems/lab1/src/io.cpp",
+  "file": "/home/nikita/operation_systems/lab1/src/io.cpp",
+  "output": "CMakeFiles/child_exec.dir/src/io.cpp.o"
+},
+{
+  "directory": "/home/nikita/operation_systems/lab1/build/build",
+  "command": "/usr/bin/g++   -g -std=gnu++11 -o CMakeFiles/child_exec.dir/src/errors.cpp.o -c /home/nikita/operation_systems/lab1/src/errors.cpp",
+  "file": "/home/nikita/operation_systems/lab1/src/errors.cpp",
+  "output": "CMakeFiles/child_exec.dir/src/errors.cpp.o"
+}
+]

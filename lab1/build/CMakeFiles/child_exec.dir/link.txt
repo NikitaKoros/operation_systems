@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/child_exec.dir/src/child.cpp.o CMakeFiles/child_exec.dir/src/io.cpp.o CMakeFiles/child_exec.dir/src/errors.cpp.o -o child_exec 
