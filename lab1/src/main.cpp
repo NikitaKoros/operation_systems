@@ -38,9 +38,18 @@ int main(int argc, char* argv[]) {
         dup2(pipe2[1], STDERR_FILENO);
         dup2(file_output, STDOUT_FILENO);
         
+        close(pipe1[0]);
+        close(pipe2[1]);
+        close(file_output);
+            
         char *args[] = {(char*)"child_exec", NULL};
         execv("./child_exec", args);
         log_errors(EXEC_ERROR);
+        
+        close(STDIN_FILENO);
+        close(STDOUT_FILENO);
+        close(STDERR_FILENO);
+        
         return 1;
     } 
     
@@ -63,9 +72,10 @@ int main(int argc, char* argv[]) {
     
     while (read_input(pipe2[0], error_messages)) {
         print_to_stdout(error_messages + '\n');
-        return 1;
+        return 0;
     }
     
+    close(pipe2[0]);
     close(file_output);
     return 0;
 }
