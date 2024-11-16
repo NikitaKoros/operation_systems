@@ -1,5 +1,4 @@
 #include "../include/child.h"
-//#include <cctype>
 #include <unistd.h>
 
 int main() {
