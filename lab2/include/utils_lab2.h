@@ -7,7 +7,7 @@
 #include <pthread.h>
 #include <semaphore.h>
 
-#define MAX_SIZE 1000
+#define MAX_SIZE 100
 
 extern int matrix[MAX_SIZE][MAX_SIZE];
 extern int size;
@@ -22,7 +22,7 @@ typedef struct {
 
 int calculate_determinant();
 void* calculate_minor(void*);
-int recursive_determinant(int [MAX_SIZE][MAX_SIZE], int);
+int recursive_determinant(int**, int);
 char* int_to_string(int, char*, int);
 void read_matrix(int[MAX_SIZE][MAX_SIZE], int);
 

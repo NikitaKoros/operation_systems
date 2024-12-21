@@ -16,7 +16,7 @@ int main(int argc, char* argv[]) {
         return 1;
     }
     
-    sem_init(&semaphore, 0, maxThreads);
+    //sem_init(&semaphore, 0, maxThreads);
     
     read_matrix(matrix, size);
     

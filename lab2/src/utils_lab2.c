@@ -66,7 +66,13 @@ void read_matrix(int matrix[MAX_SIZE][MAX_SIZE], int size) {
     }
 }
 
-int recursive_determinant(int tempMatrix[MAX_SIZE][MAX_SIZE], int n) {
+int recursive_determinant(int** tempMatrix, int n) {
+    
+    if (tempMatrix == NULL || n <= 0) {
+        fprintf(stderr, "Invalid matrix or size in recursive_determinant.\n");
+        return 0;
+    }
+    
     if (n == 1) {
         return tempMatrix[0][0];
     }
@@ -74,8 +80,26 @@ int recursive_determinant(int tempMatrix[MAX_SIZE][MAX_SIZE], int n) {
         return tempMatrix[0][0] * tempMatrix[1][1] - tempMatrix[0][1] * tempMatrix[1][0];
     }
 
+    //int minorMatrix[MAX_SIZE][MAX_SIZE];
+    
+    int **minorMatrix = (int**)malloc((n - 1) * sizeof(int *));
+    if (minorMatrix == NULL) {
+        log_errors(MEM_ALLOC_FAILED);
+        return 0;
+    }
+    for (int i = 0; i < n - 1; i++) {
+        minorMatrix[i] = (int*)malloc((n - 1) * sizeof(int));
+        if (minorMatrix[i] == NULL) {
+            log_errors(MEM_ALLOC_FAILED);
+            for (int j = 0; j < i; j++) {
+                free(minorMatrix[j]);
+            }
+            free(minorMatrix);
+            return 0;
+        }
+    }
+    
     int determinant = 0;
-    int minorMatrix[MAX_SIZE][MAX_SIZE];
     for (int j = 0; j < n; ++j) {
         for (int i = 1, x = 0; i < n; ++i, ++x) {
             for (int k = 0, y = 0; k < n; ++k) {
@@ -85,16 +109,37 @@ int recursive_determinant(int tempMatrix[MAX_SIZE][MAX_SIZE], int n) {
         }
 
         int minorDet = recursive_determinant(minorMatrix, n - 1);
+        //printf("minor of size %d = %d\n", n, minorDet);
         determinant += ((j % 2 == 0) ? 1 : -1) * tempMatrix[0][j] * minorDet;
     }
-
+    
+    for (int i = 0; i < n - 1; i++) {
+        free(minorMatrix[i]);
+    }
+    free(minorMatrix);
     return determinant;
 }
 
 void *calculate_minor(void *arg) {
     MinorArgs *args = (MinorArgs *)arg;
 
-    int tempMatrix[MAX_SIZE][MAX_SIZE];
+    //int tempMatrix[MAX_SIZE][MAX_SIZE];
+    int **tempMatrix = (int**)malloc((MAX_SIZE - 1) * sizeof(int *));
+    if (tempMatrix == NULL) {
+        log_errors(MEM_ALLOC_FAILED);
+        return 0;
+    }
+    for (int i = 0; i < MAX_SIZE - 1; i++) {
+        tempMatrix[i] = (int*)malloc((MAX_SIZE - 1) * sizeof(int));
+        if (tempMatrix[i] == NULL) {
+            log_errors(MEM_ALLOC_FAILED);
+            for (int j = 0; j < i; j++) {
+                free(tempMatrix[j]);
+            }
+            free(tempMatrix);
+            return 0;
+        }
+    }
     int minorSize = size - 1;
 
     for (int i = 0, x = 0; i < size; ++i) {
@@ -119,11 +164,11 @@ void *calculate_minor(void *arg) {
 int calculate_determinant() {
     pthread_t threads[MAX_SIZE];
     MinorArgs args[MAX_SIZE];
-    int determinant = 0;
-
-    for (int j = 0; j < size; ++j) {
-        sem_wait(&semaphore);
-        args[j].row = 0;
+        int determinant = 0;
+    
+        for (int j = 0; j < size; ++j) {
+            //sem_wait(&semaphore); // Зачем тут семафор?
+            args[j].row = 0;
         args[j].col = j;
 
         if (pthread_create(&threads[j], NULL, calculate_minor, &args[j]) != 0) {
@@ -131,6 +176,11 @@ int calculate_determinant() {
             exit(EXIT_FAILURE);
         }
     }
+    // for (int j = 0; j < size; ++j) {
+    //     args[j].row = 0;
+    //     args[j].col = j;
+    //     calculate_minor(&args[j]);
+    // }
 
     for (int j = 0; j < size; ++j) {
         pthread_join(threads[j], NULL);
