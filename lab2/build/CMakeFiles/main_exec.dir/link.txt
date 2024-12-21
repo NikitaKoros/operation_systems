@@ -1,1 +1,1 @@
-/usr/bin/gcc -g CMakeFiles/main_exec.dir/src/main.c.o CMakeFiles/main_exec.dir/src/io.c.o CMakeFiles/main_exec.dir/src/errors.c.o CMakeFiles/main_exec.dir/src/utils_lab2.c.o -o main_exec 
+/usr/bin/gcc -g -O0 -Wall CMakeFiles/main_exec.dir/src/main.c.o CMakeFiles/main_exec.dir/src/io.c.o CMakeFiles/main_exec.dir/src/errors.c.o CMakeFiles/main_exec.dir/src/utils_lab2.c.o -o main_exec 

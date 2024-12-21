@@ -1,25 +1,25 @@
 [
 {
   "directory": "/home/nikita/operation_systems/lab2/build",
-  "command": "/usr/bin/gcc   -g -std=gnu99 -o CMakeFiles/main_exec.dir/src/main.c.o -c /home/nikita/operation_systems/lab2/src/main.c",
+  "command": "/usr/bin/gcc   -g -O0 -Wall -std=gnu99 -o CMakeFiles/main_exec.dir/src/main.c.o -c /home/nikita/operation_systems/lab2/src/main.c",
   "file": "/home/nikita/operation_systems/lab2/src/main.c",
   "output": "CMakeFiles/main_exec.dir/src/main.c.o"
 },
 {
   "directory": "/home/nikita/operation_systems/lab2/build",
-  "command": "/usr/bin/gcc   -g -std=gnu99 -o CMakeFiles/main_exec.dir/src/io.c.o -c /home/nikita/operation_systems/lab2/src/io.c",
+  "command": "/usr/bin/gcc   -g -O0 -Wall -std=gnu99 -o CMakeFiles/main_exec.dir/src/io.c.o -c /home/nikita/operation_systems/lab2/src/io.c",
   "file": "/home/nikita/operation_systems/lab2/src/io.c",
   "output": "CMakeFiles/main_exec.dir/src/io.c.o"
 },
 {
   "directory": "/home/nikita/operation_systems/lab2/build",
-  "command": "/usr/bin/gcc   -g -std=gnu99 -o CMakeFiles/main_exec.dir/src/errors.c.o -c /home/nikita/operation_systems/lab2/src/errors.c",
+  "command": "/usr/bin/gcc   -g -O0 -Wall -std=gnu99 -o CMakeFiles/main_exec.dir/src/errors.c.o -c /home/nikita/operation_systems/lab2/src/errors.c",
   "file": "/home/nikita/operation_systems/lab2/src/errors.c",
   "output": "CMakeFiles/main_exec.dir/src/errors.c.o"
 },
 {
   "directory": "/home/nikita/operation_systems/lab2/build",
-  "command": "/usr/bin/gcc   -g -std=gnu99 -o CMakeFiles/main_exec.dir/src/utils_lab2.c.o -c /home/nikita/operation_systems/lab2/src/utils_lab2.c",
+  "command": "/usr/bin/gcc   -g -O0 -Wall -std=gnu99 -o CMakeFiles/main_exec.dir/src/utils_lab2.c.o -c /home/nikita/operation_systems/lab2/src/utils_lab2.c",
   "file": "/home/nikita/operation_systems/lab2/src/utils_lab2.c",
   "output": "CMakeFiles/main_exec.dir/src/utils_lab2.c.o"
 }
