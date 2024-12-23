@@ -1,6 +1,7 @@
 CMakeFiles/main_exec.dir/src/main.c.o: \
  /home/nikita/operation_systems/lab2/src/main.c \
  /usr/include/stdc-predef.h \
+ /home/nikita/operation_systems/lab2/src/../include/errors.h \
  /home/nikita/operation_systems/lab2/src/../include/io.h \
  /usr/include/unistd.h /usr/include/features.h \
  /usr/include/features-time64.h \
@@ -24,7 +25,6 @@ CMakeFiles/main_exec.dir/src/main.c.o: \
  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
  /usr/include/strings.h \
- /home/nikita/operation_systems/lab2/src/../include/errors.h \
  /home/nikita/operation_systems/lab2/src/../include/io.h \
  /home/nikita/operation_systems/lab2/src/../include/utils_lab2.h \
  /home/nikita/operation_systems/lab2/src/../include/errors.h \
