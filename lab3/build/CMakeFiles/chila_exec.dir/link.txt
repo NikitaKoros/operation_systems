@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/chila_exec.dir/src/child.cpp.o CMakeFiles/chila_exec.dir/src/io.cpp.o CMakeFiles/chila_exec.dir/src/errors.cpp.o -o chila_exec 

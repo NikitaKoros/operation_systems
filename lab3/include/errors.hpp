@@ -5,12 +5,19 @@
 
 typedef enum {
     OK,
-    PIPE_ERROR,
-    STOP_ERROR,
+    SHM_OPEN_ERROR,
+    MMAP_ERROR,
+    SEM_OPEN_ERROR,
+    SEM_WAIT_ERROR,
+    SEM_POST_ERROR,
+    
+    TRUNCATE_ERROR,
+    FORK_ERROR,
+    EXECL_ERROR,
+    
     READ_ERROR,
     WRITE_FAILED,
     FILE_OPEN_ERROR,
-    INVALID_INPUT,
 } Error;
 
 void log_errors(Error);

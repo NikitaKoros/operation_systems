@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/main_exec.dir/src/main.cpp.o CMakeFiles/main_exec.dir/src/io.cpp.o CMakeFiles/main_exec.dir/src/errors.cpp.o -o main_exec  -lpthread -lrt 
