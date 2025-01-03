@@ -8,6 +8,10 @@ void log_errors(Error err) {
             break;
         case IMPLEMENTATION_NOT_FOUND:
             write_to_file(STDERR_FILENO, "IMPLEMENTATION_NOT_FOUND\n");
+            break;
+        case LIBRARY_OPEN_ERROR:
+            write_to_file(STDERR_FILENO, "LIBRARY_OPEN_ERROR\n");
+            break;
         default:
             write_to_file(STDERR_FILENO, "UNKNOWN_ERROR\n");
             break;
