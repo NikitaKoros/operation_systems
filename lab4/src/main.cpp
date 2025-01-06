@@ -55,6 +55,11 @@ void load_library_functions(char* lib_path) {
     if (!library) {
         return;
     }
+    
+    allocator_create = (create_func) dlsym(library, "allocator_create");
+    allocator_destroy = (destroy_func) dlsym(library, "allocator_destroy");
+    allocator_alloc = (alloc_func) dlsym(library, "allocator_alloc");
+    allocator_free = (free_func) dlsym(library, "allocator_free");
 }
 
 int main(int argc, char** argv) {

@@ -12,6 +12,11 @@ void log_errors(Error err) {
         case LIBRARY_OPEN_ERROR:
             write_to_file(STDERR_FILENO, "LIBRARY_OPEN_ERROR\n");
             break;
+        case ALLOCATOR_CREATION_ERROR:
+            write_to_file(STDERR_FILENO, "ALLOCATOR_CREATION_ERROR\n");
+            break;
+        case ALLOCATOR_DESTRACTION_FAILED:
+            write_to_file(STDERR_FILENO, "ALLOCATOR_DESTRACTION_FAILED\n");
         default:
             write_to_file(STDERR_FILENO, "UNKNOWN_ERROR\n");
             break;
