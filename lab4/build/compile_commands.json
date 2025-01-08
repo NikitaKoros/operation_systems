@@ -1,0 +1,20 @@
+[
+{
+  "directory": "/home/nikita/operation_systems/lab4/build",
+  "command": "/usr/bin/g++   -g -std=gnu++11 -o CMakeFiles/main_exec.dir/src/main.cpp.o -c /home/nikita/operation_systems/lab4/src/main.cpp",
+  "file": "/home/nikita/operation_systems/lab4/src/main.cpp",
+  "output": "CMakeFiles/main_exec.dir/src/main.cpp.o"
+},
+{
+  "directory": "/home/nikita/operation_systems/lab4/build",
+  "command": "/usr/bin/g++   -g -std=gnu++11 -o CMakeFiles/main_exec.dir/src/io.cpp.o -c /home/nikita/operation_systems/lab4/src/io.cpp",
+  "file": "/home/nikita/operation_systems/lab4/src/io.cpp",
+  "output": "CMakeFiles/main_exec.dir/src/io.cpp.o"
+},
+{
+  "directory": "/home/nikita/operation_systems/lab4/build",
+  "command": "/usr/bin/g++   -g -std=gnu++11 -o CMakeFiles/main_exec.dir/src/errors.cpp.o -c /home/nikita/operation_systems/lab4/src/errors.cpp",
+  "file": "/home/nikita/operation_systems/lab4/src/errors.cpp",
+  "output": "CMakeFiles/main_exec.dir/src/errors.cpp.o"
+}
+]

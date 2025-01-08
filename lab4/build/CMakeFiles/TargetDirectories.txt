@@ -1,0 +1,3 @@
+/home/nikita/operation_systems/lab4/build/CMakeFiles/main_exec.dir
+/home/nikita/operation_systems/lab4/build/CMakeFiles/edit_cache.dir
+/home/nikita/operation_systems/lab4/build/CMakeFiles/rebuild_cache.dir
