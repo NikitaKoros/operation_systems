@@ -17,6 +17,10 @@ void log_errors(Error err) {
             break;
         case ALLOCATOR_DESTRACTION_FAILED:
             write_to_file(STDERR_FILENO, "ALLOCATOR_DESTRACTION_FAILED\n");
+            break;
+        case MEMORY_MAPPING_FAILED:
+            write_to_file(STDERR_FILENO, "MEMORY_MAPPING_FAILED\n");
+            break;
         default:
             write_to_file(STDERR_FILENO, "UNKNOWN_ERROR\n");
             break;

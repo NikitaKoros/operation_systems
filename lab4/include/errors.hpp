@@ -10,7 +10,7 @@ typedef enum {
     LIBRARY_OPEN_ERROR,
     ALLOCATOR_CREATION_ERROR,
     ALLOCATOR_DESTRACTION_FAILED,
-    
+    MEMORY_MAPPING_FAILED,
 } Error;
 
 void log_errors(Error);
