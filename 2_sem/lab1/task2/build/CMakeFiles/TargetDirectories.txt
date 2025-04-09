@@ -1,0 +1,3 @@
+/home/nikita/university/operation_systems/2_sem/lab1/task2/build/CMakeFiles/task2.dir
+/home/nikita/university/operation_systems/2_sem/lab1/task2/build/CMakeFiles/edit_cache.dir
+/home/nikita/university/operation_systems/2_sem/lab1/task2/build/CMakeFiles/rebuild_cache.dir
